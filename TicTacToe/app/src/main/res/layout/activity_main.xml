@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background2"
+        tools:context=".MainActivity">
+
+    <!-- Табло с информация за играчите -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_above="@id/container"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+        <!-- Играч 1 -->
+        <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerOneLayout"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/black_border">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Player One"
+                    android:id="@+id/playerOneName"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"/>
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ximage"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:id="@+id/playerOneScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wins: 0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/orange"/>
+        </LinearLayout>
+
+        <!-- Играч 2 -->
+        <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/playerTwoLayout"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/white_box">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Player Two"
+                    android:id="@+id/playerTwoName"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"/>
+
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/oimage"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:id="@+id/playerTwoScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wins: 0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/blue"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Игрова дъска -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+        <!-- Първи ред -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image1"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image2"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image3"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+        </LinearLayout>
+
+        <!-- Втори ред -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image4"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image5"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image6"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+        </LinearLayout>
+
+        <!-- Трети ред -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image7"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image8"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:id="@+id/image9"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_box"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Бутон за рестартиране -->
+    <Button
+            android:id="@+id/resetScoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Scores"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
